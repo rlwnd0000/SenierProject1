@@ -10,7 +10,7 @@ import static common.ConUtilDAO.*;
 import common.Action;
 import common.ActionForward;
 import ops.MemberCareer.Beans.Career;
-//이력서작성 action 諛� service
+//이력서작성 action 및 service
 public class CareerWriteProAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		ActionForward forward = null;
@@ -48,7 +48,7 @@ public class CareerWriteProAction implements Action {
 			response.setContentType("text/html;charset = UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('�벑濡앹떎�뙣');");
+			out.println("alert('작성실패');");
 			out.println("history.back();");
 			out.println("</script>");
 			
