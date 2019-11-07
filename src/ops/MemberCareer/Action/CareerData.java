@@ -27,7 +27,7 @@ public class CareerData {
 		this.con = con;
 	}
 	
-	public int insertArticle(Career c) { //�씠�젰�꽌�옉�꽦
+	public int insertArticle(Career c) { //이력서작성
 		int x = 0;
 		try {
 			String sql = "insert into career values(null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -55,14 +55,14 @@ public class CareerData {
 			x = ps.executeUpdate();
 			
 		}catch(Exception e) {
-			System.out.println("�씠�젰�꽌�옉�꽦�삤瑜�:"+ e);
+			System.out.println("이력서작성오류:"+ e);
 		}finally {
 			close(ps);
 		}
 		return x;
 	}
 	
-	public ArrayList<Career> selectCareerList(){ //�씠�젰�꽌由ъ뒪�듃
+	public ArrayList<Career> selectCareerList(){ //이력서리스트
 		String sql="select c.ca_no, c.ca_title, c.ca_subTitle, c.ca_selfText, c.ca_talk, c.ca_job, c.ca_address, c.ca_workTerm, c.ca_workDay, c.ca_workTime, c.ca_date, c.ca_sal, c.ca_acadamiBg, c.ca_startPublic, c.ca_endPublic, c.ca_publicTerm, c.ca_phone, c.ca_addPhone, c.ca_private, w.workName, m.id from career c, work w, member m where c.workFormNo = w.workFormNo and m.id = c.id;";
 		ArrayList<Career> careerList = new ArrayList<Career>();
 		
@@ -98,7 +98,7 @@ public class CareerData {
 				}while(rs.next());
 			}
 		}catch(Exception ex){
-			System.out.println("�씠�젰�꽌 由ъ뒪�듃 �뿉�윭: " + ex);			
+			System.out.println("이력서리스트오류: " + ex);			
 		}finally{
 			close(rs);
 			close(ps);
@@ -106,7 +106,7 @@ public class CareerData {
 		return careerList;
 	}
 	
-	public Career selectDetail(int ca_no) { //�씠�젰�꽌 議고쉶
+	public Career selectDetail(int ca_no) { //이력서 상세보기
 		Career c = null;
 		try {
 			String sql = "select * from career where ca_no=?";
@@ -141,7 +141,7 @@ public class CareerData {
 				
 			}
 		}catch(Exception e) {
-			System.out.println("�씠�젰�꽌議고쉶�삤瑜� : " + e);
+			System.out.println("이력서 상세보기오류 : " + e);
 		}finally {
 			close(rs);
 			close(ps);
@@ -149,7 +149,7 @@ public class CareerData {
 		return c;
 	}
 	
-	public int updateArticle(Career article){ //�씠�젰�꽌 �닔�젙
+	public int updateArticle(Career article){ //이력서수정
 
 		int updateCount = 0;
 		String sql="update career set ca_title=?, ca_subTitle=?, ca_selfText=?, ca_talk=?, ca_job=?, ca_address=?, ca_workTerm=?, ca_workDay=?, ca_workTime=?, ca_sal=?, ca_acadamiBg=?, ca_startPublic=?, ca_endPublic=?, ca_publicTerm=?, ca_phone=?, ca_addPhone=? where ca_no=?";
@@ -175,7 +175,7 @@ public class CareerData {
 			ps.setInt(17, article.getCa_no());
 			updateCount = ps.executeUpdate();
 		}catch(Exception ex){
-			System.out.println("�씠�젰�꽌�닔�젙 �뿉�윭 : " + ex);
+			System.out.println("이력서수정오류 : " + ex);
 		}finally{
 			close(ps);
 		}
@@ -183,7 +183,7 @@ public class CareerData {
 		return updateCount;
 	}
 	
-	public ArrayList<Work> selectWorkList(){ //�뾽臾댄삎�깭 由ъ뒪�듃
+	public ArrayList<Work> selectWorkList(){ //직종선택
 		String sql="select * from work";
 		ArrayList<Work> workList = new ArrayList<Work>();
 		
@@ -200,41 +200,15 @@ public class CareerData {
 				}while(rs.next());
 			}
 		}catch(Exception ex){
-			System.out.println("�뾽醫� 由ъ뒪�듃 �뿉�윭: " + ex);			
+			System.out.println("직종오류: " + ex);			
 		}finally{
 			close(rs);
 			close(ps);
 		}
 		return workList;
-	}
+	}	
 	
-	public ArrayList<Loc> selectAddressList() { //二쇱냼...�뀪�뀪
-		ArrayList<Loc> list = new ArrayList<Loc>();
-		
-		try {
-		String sql = "select * from loc where cityName LIKE '%' || ? || '%'";
-		ps = con.prepareStatement(sql);
-		ps.setString(1, cityName);
-		rs = ps.executeQuery();
-		if(rs.next()){
-			do{
-			Loc l = new Loc();
-			l.setCityName(rs.getString("cityName"));
-			l.setCountyName(rs.getString("countyName"));
-			l.setRoadName(rs.getString("roadName"));
-			list.add(l);
-			}while(rs.next());
-		}
-		}catch(Exception ex){
-			System.out.println("二쇱냼 �뿉�윭: " + ex);			
-		}finally{
-			close(rs);
-			close(ps);
-		}
-		return list;
-	}
-	
-	public boolean isArticleCareerWriter(int ca_no){ //�씠�젰�꽌踰덊샇�솗�씤
+	public boolean isArticleCareerWriter(int ca_no){ //이력서 번호확인
 
 		String sql="select * from career where ca_no=?";
 		boolean isWriter = false;
@@ -247,7 +221,7 @@ public class CareerData {
 				isWriter = true;
 			}
 		}catch(Exception e){
-			System.out.println("isCareerWriter �뿉�윭 : "+ e);
+			System.out.println("isCareerWriter 오류: "+ e);
 		}
 		finally{
 			close(ps);
@@ -255,7 +229,7 @@ public class CareerData {
 		return isWriter;
 	}
 	
-	public int deleteArticle(int ca_no){ //�씠�젰�꽌�궘�젣
+	public int deleteArticle(int ca_no){ //이력서 삭제
 
 		String sql="delete from career where ca_no=?";
 		int deleteCount=0;
@@ -265,7 +239,7 @@ public class CareerData {
 			ps.setInt(1, ca_no);
 			deleteCount = ps.executeUpdate();
 		}catch(Exception ex){
-			System.out.println("Delete �뿉�윭 : "+ex);
+			System.out.println("Delete오류: "+ex);
 		}	finally{
 			close(ps);
 		}
