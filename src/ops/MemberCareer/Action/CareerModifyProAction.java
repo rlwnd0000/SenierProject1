@@ -10,7 +10,7 @@ import common.ActionForward;
 import ops.MemberCareer.Beans.Career;
 
 
-
+//이력서 수정 Action
 public class CareerModifyProAction implements Action {
 
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) 
@@ -27,7 +27,7 @@ public class CareerModifyProAction implements Action {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out=response.getWriter();
 			out.println("<script>");
-			out.println("alert('수정실패');");
+			out.println("alert('접근실패');");
 			out.println("history.back();");
 			out.println("</script>");
 		}
