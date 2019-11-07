@@ -6,8 +6,7 @@ ex) DB ERD 설계, MVC2 모델로 만든 이력서작성, 리스트띄우기, �
 
 파일중
 
-DB/Physical -> 물리적설계 이미지파일
-DB/Logical.png -> 논리적설계 이미지파일
+DB/Physical.png, Logical.png -> ERD 이미지<br>
 DB/dump.sql-> sql dump 파일
 ~Data -> DAO, ~bean -> VO, ~Controller -> Controller
 
