@@ -16,7 +16,7 @@
 - SenierPriject1에는 DB ERD이미지 및 파일과 덤프파일, 이력서 부분 파일이있고 **나머지파일은 SenierProject2에 올리도록하겠습니다.**<br>
 - DB/Physical.png, Logical.png -> ERD 이미지<br>
 - DB/dump.sql-> sql dump 파일<br>
-- src/ops/MemberCareer -> 이력서작성, 리스트보기, 수정, 조회, 삭제<
+- src/ops/MemberCareer -> 이력서작성, 리스트보기, 수정, 조회, 삭제
 - src/ops/MemberCareer/Action/~Action -> action
 - src/ops/MemberCareer/Action/~Data -> DAO
 - src/ops/MemberCareer/Beans -> vo
