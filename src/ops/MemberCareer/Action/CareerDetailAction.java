@@ -11,7 +11,7 @@ import common.Action;
 import common.ActionForward;
 import ops.MemberCareer.Beans.Career;
 
-
+//이력서 상세보기 Action
 public class CareerDetailAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		int ca_no = Integer.parseInt(request.getParameter("ca_no"));
