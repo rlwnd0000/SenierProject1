@@ -6,7 +6,7 @@
 ### 역할<br>
 - 졸업작품당시 팀에서 맡은 역할인 DB설계와 백엔드 개발(JSP MVC2 모델이용)을 담당했습니다.<br>
 - DB ERD 설계 및 수정
-- 이력서작성, 리스트띄우기, 수정, 조회, 삭제 입니다.<br>
+- 이력서작성, 리스트보기, 수정, 조회, 삭제 입니다.<br>
 - 공고작성, 수정, 리스트보기, 조회, 삭제<br>
 - 관리자 페이지의 공지사항 작성, 수정, 조회, 삭제<br>
 - 관리자 페이지의 Q&A 작성, 수정, 조회, 삭제<br>
@@ -16,6 +16,7 @@
 - SenierPriject1에는 DB ERD이미지 및 파일과 덤프파일, 이력서 부분 파일이있고 **나머지파일은 SenierProject2에 올리도록하겠습니다.**<br>
 - DB/Physical.png, Logical.png -> ERD 이미지<br>
 - DB/dump.sql-> sql dump 파일<br>
+- src/ops/MemberCareer -> 이력서작성, 리스트보기, 수정, 조회, 삭제<
 - src/ops/MemberCareer/Action/~Action -> action
 - src/ops/MemberCareer/Action/~Data -> DAO
 - src/ops/MemberCareer/Beans -> vo
