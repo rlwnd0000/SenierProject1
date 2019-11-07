@@ -20,6 +20,7 @@
 - src/ops/MemberCareer/Action/~Data -> DAO
 - src/ops/MemberCareer/Beans -> vo
 - src/Controller -> Controller
+- SenierProject1/WebContent/~.jsp -> View
 
 ### 프로젝트 주요기능<br>
 일반회원
