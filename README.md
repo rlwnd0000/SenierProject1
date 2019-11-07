@@ -18,7 +18,8 @@
 - DB/dump.sql-> sql dump 파일<br>
 - src/ops/MemberCareer/Action -> action
 - src/ops/MemberCareer/Beans -> vo
-- ~Data -> , Beans -> VO, Controller -> Controller<br>
+- src/Controller -> Controller
+
 
 
 
