@@ -7,7 +7,7 @@ import common.Action;
 import common.ActionForward;
 import ops.MemberCareer.Beans.Career;
 
-
+//이력서 수정폼 Action
 public class CareerModifyFormAction implements Action {
 	
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
