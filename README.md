@@ -17,6 +17,7 @@
 - DB/Physical.png, Logical.png -> ERD 이미지<br>
 - DB/dump.sql-> sql dump 파일<br>
 - src/ops/MemberCareer/Action -> action
+- src/ops/MemberCareer/Action/~Data -> DAO
 - src/ops/MemberCareer/Beans -> vo
 - src/Controller -> Controller
 
