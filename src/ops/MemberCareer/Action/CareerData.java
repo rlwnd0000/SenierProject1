@@ -11,6 +11,7 @@ import ops.MemberCareer.Beans.Career;
 import ops.MemberCareer.Beans.Loc;
 import ops.MemberCareer.Beans.Work;
 
+//이력서 DAO
 public class CareerData {
 	Connection con;
 	PreparedStatement ps = null;
