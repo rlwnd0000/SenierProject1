@@ -13,7 +13,7 @@
 - 1:1 문의 게시판 작성, 수정, 조회, 삭제, 답변달기를 맡아 담당하였습니다.<br>
 
 ### 구성파일<br>
-- SenierPriject1에는 DB ERD이미지 및 파일과 덤프파일, 이력서 부분 파일이있고 나머지파일은 SenierProject2에 올리도록하겠습니다.<br>
+- SenierPriject1에는 DB ERD이미지 및 파일과 덤프파일, 이력서 부분 파일이있고 **나머지파일은 SenierProject2에 올리도록하겠습니다.**<br>
 - DB/Physical.png, Logical.png -> ERD 이미지<br>
 - DB/dump.sql-> sql dump 파일<br>
 - src/ops/MemberCareer/Action/~Action -> action
