@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import common.Action;
 import common.ActionForward;
 
-
+//Ïù¥Î†•ÏÑúÏÇ≠Ï†ú Action
 public class CareerDeleteProAction implements Action {
 	public ActionForward execute(HttpServletRequest request,HttpServletResponse response) 
 			throws Exception{
@@ -21,7 +21,7 @@ public class CareerDeleteProAction implements Action {
 				response.setContentType("text/html;charset=UTF-8");
 				PrintWriter out=response.getWriter();
 				out.println("<script>");
-				out.println("alert('ªË¡¶Ω«∆–');");
+				out.println("alert('ÏÇ≠Ï†úÏã§Ìå®');");
 				out.println("history.back();");
 				out.println("</script>");
 				out.close();
