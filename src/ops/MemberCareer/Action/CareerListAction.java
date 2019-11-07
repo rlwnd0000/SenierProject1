@@ -9,6 +9,7 @@ import common.Action;
 import common.ActionForward;
 import ops.MemberCareer.Beans.Career;
 
+//이력서리스트 Action
 public class CareerListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		ActionForward forward = null;
